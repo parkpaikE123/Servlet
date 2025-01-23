@@ -27,20 +27,26 @@ public class Test10 extends HttpServlet{
 		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
 		
-		String id = request.getParameter("id");
-		String password = request.getParameter("password");
+		String userId = request.getParameter("id");
+		String userPassword = request.getParameter("password");
 		
 		out.println(""
 				+ "<html>"
 				+ "		<head><title>사용자 정보 확인</title></head>"
 				+ "		<body>");
 		
-		String checkId = userMap.get(id);
-		String checkPw = userMap.get(password);
-		String name = userMap.get("김인규");
+		String checkId = userMap.get("id");
+		String checkPw = userMap.get("password");
+		String name = userMap.get("name");
 		
 		// 요건 다시해보자
-		
+		if(!userId.equals(checkId)) {
+			out.println("Id가 일치하지 않습니다.");
+		} else if(!userPassword.equals(checkPw)) {
+			out.println("password가 일치하지 않습니다.");
+		} else {
+			out.println("<h2>" + name + "님 환영합니다.</h2>");
+		}
 		
 		out.println("	</body>"
 				+ "	</html>");
