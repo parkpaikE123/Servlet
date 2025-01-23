@@ -38,6 +38,7 @@ public class Ex05 extends HttpServlet{
 		out.println(""
 				+ "		</body>\n"
 				+ "</html>");
+		out.println("OK");
 	}
 	
 }
