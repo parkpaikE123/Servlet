@@ -38,6 +38,7 @@ public class Ex05 extends HttpServlet{
 		out.println(""
 				+ "		</body>\n"
 				+ "</html>");
+		// home pc 연동 확인
 		out.println("OK");
 	}
 	
