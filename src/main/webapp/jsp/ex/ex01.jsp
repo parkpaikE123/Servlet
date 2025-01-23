@@ -54,7 +54,7 @@
 	%>	
 	
 	<h3><%= message %></h3>
-	<h3><%= getHelloWorld() %></h3>
+	<h3><%= getHelloWorld()%></h3>
 	
 	
 		
