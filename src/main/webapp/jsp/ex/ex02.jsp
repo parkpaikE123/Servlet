@@ -27,6 +27,7 @@
 			<td>나이</td>
 			<td><%= age %></td>
 		</tr>
+		
 	</table>
 	
 
