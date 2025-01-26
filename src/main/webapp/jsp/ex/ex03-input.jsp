@@ -17,6 +17,12 @@
 		<label for="lionRadio">사자</label><input type="radio" id="lionRadio" value="lion" name="animal">
 		
 		<h3>좋아하는 과일을 하나 고르세요</h3>
+		<select>
+			<option name="fruit" value="banana">바나나</option>
+			<option name="fruit" value="strawberry">딸기</option>
+			<option name="fruit" value="peach">복숭아</option>
+		</select>
+		
 		
 		
 		<button type="submit">입력</button>

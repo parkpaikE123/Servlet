@@ -18,11 +18,14 @@
 		// 좋아하는 과일을 전달 받고 보여준다.
 		// 바나나, 딸기, 복숭아
 		String fruit = request.getParameter("fruit");
+		
 	%>
 	
 	<h3><%=nickname %></h3>
 	<h3><%=animal %></h3>
 	<h3><%=fruit %></h3>
+	
+	
 
 </body>
 </html>
