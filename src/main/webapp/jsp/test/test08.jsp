@@ -56,35 +56,29 @@
 		};
 		list.add(map);
 	%>
-<div class="container">
-	<h1 class="text-center">책 목록</h1>
+<div class="container text-center">
+	<h1>책 목록</h1>
 	<table class="table">
 		<thead>
 			<tr>
-				<td>id</td>
-				<td>표지</td>
-				<td>제목</td>
+				<th>id</th>
+				<th>표지</th>
+				<th>제목</th>
 			</tr>
 		</thead>
 		<tbody>
 		<% for(Map<String, Object> bookInfo:list) { %>
-		<form metod="get" action="/jsp/test/test08-info.jsp?bookId=<%=bookInfo.get("id") %>">
 			<tr>
 				<td name="bookId"><%=bookInfo.get("id") %></td>
-				<td><img alt="책 표지" class="w-25" src="<%=bookInfo.get("image") %>" href="<%=bookInfo.get("image")%>"></td>
-				<td><a name="book" type="submit" href="./jsp/test/test08-info.jsp"><%=bookInfo.get("title") %></a></td>
+				<td><img alt="책 표지" width="120" src="<%=bookInfo.get("image") %>"></td>
+				<td class="display-4">
+					<a href="/jsp/test/test08-info.jsp?id=<%=bookInfo.get("id") %>"><%=bookInfo.get("title") %></a>
+				</td>
 			</tr>
 		<% }%> 
 		</tbody>
-		</form>
 	</table>
 </div>
-
-
-
-
-
-
 
 
 
