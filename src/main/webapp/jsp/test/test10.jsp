@@ -7,7 +7,7 @@
 <meta charset="UTF-8">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 <link rel="stylesheet" href="test10.style.css">
-<title>Insert title here</title>
+<title>test10 멜롱 사이트</title>
 </head>
 <body>
 <%
@@ -94,8 +94,10 @@
 
 	<div class="container" id="wrap">
 		<header class="main-bar w-100 d-flex align-items-center">
-			<div class="logo">Melong</div>
-			<input type="text" class="form-control"><button width="30px" class="btn btn-info form-control " type="submit">검색</button>
+			<div class="logo mr-2"><h3>Melong</h3></div>
+			<label class="d-flex">
+				<input type="text" class="form-control"><button class="btn btn-info form-control" type="submit">검색</button>
+			</label>
 		</header>
 		<nav class="d-flex align-items-center">
 			<ul class="nav nav-fill">
@@ -107,8 +109,34 @@
 			</ul>
 		</nav>
 		<section>
-			<div class="article1 bg-success"></div>
-			<div class="article2 bg-secondary"></div>
+			<div class="article1 bg-success d-flex">
+				<div>
+					<img width="200" alt="가수 사진" src="https://musicmeta-phinf.pstatic.net/artist/000/112/112579.jpg?type=ff300_300">
+				</div>
+				<div class=" justify-content-center align-item-center">
+					<div class="display-5">아이유</div>
+					<div>EDAM엔터테인먼트</div>
+					<div>2008데뷔</div>
+				</div>
+			</div>
+			<div class="article2 bg-secondary">
+				곡 목록
+				<table class="table">
+					<thead>
+						<th>no</th>
+						<th>제목</th>
+						<th>앨범</th>
+					</thead>
+					<tbody>
+						<tr>
+							<td>1</td>
+							<td>팔레트</td>
+							<td>palette</td>
+						</tr>
+					</tbody>
+				</table>
+				<hr>
+			</div>
 		</section>
 		<footer>
 			<div class="coptright bg-info">Copyright 2021. melong All Rights Reserved.</div>
