@@ -55,18 +55,28 @@
         } 
     };
     list.add(map);
-    String bookName = request.getParameter("bookName");
-    String autor = request.getParameter("author");
+    String bookId = request.getParameter("bookId");
+    int getBookKey = Integer.parseInt(bookId);
     %>
 	
-	<% for(Map<String, Object> bookInfo1:list) {%>
-	<% if(bookInfo1.get("id").equals(bookInfo1.get("id"))) { %>
 	<div class="container">
-		<img alt="책 표지" href="<%= %>">
-		<h1><%=%></h1>
-	</div>
-	<%} %>
-	<%} %>
+		<div class="form-control justify-content-start">
+			 <%for(Map<String, Object> bookKey:list) {%>
+				<%String bookKey1 = (String)bookKey.get("id"); %>
+				<%int getBookKey1 = Integer.parseInt(bookKey1); %>
+				<%if(bookKey1.equals(bookId)) {%>
+					<img width="200" height="300" alt="책 표지" src="<%=bookKey.get("image")%>">
+				</div>
+				<div class="justify-content-center">
+					<h1 class="terxt-dark"><%=bookKey.get("title") %></h1>
+					<h2 class="text-primary"><%=bookKey.get("autor") %></h2>
+					<h3 class="text-secondary"><%=bookKey.get("publisher") %></h3>
+				</div>
+				<%} %>
+			<%} %>
+ 	</div>
+	
+	
 
 
 

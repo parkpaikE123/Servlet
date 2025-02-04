@@ -68,15 +68,13 @@
 		</thead>
 		<tbody>
 		<% for(Map<String, Object> bookInfo:list) { %>
-		<form metod="get" action="/jsp/test/test08-info.jsp?bookId=<%=bookInfo.get("id") %>">
 			<tr>
 				<td name="bookId"><%=bookInfo.get("id") %></td>
 				<td><img alt="책 표지" class="w-25" src="<%=bookInfo.get("image") %>" href="<%=bookInfo.get("image")%>"></td>
-				<td><a name="book" type="submit" href="./jsp/test/test08-info.jsp"><%=bookInfo.get("title") %></a></td>
+				<td><a value="bookId" href="/jsp/test/test08-info.jsp?bookId=<%=bookInfo.get("id")%>"><%=bookInfo.get("title") %></a></td>
 			</tr>
 		<% }%> 
 		</tbody>
-		</form>
 	</table>
 </div>
 
