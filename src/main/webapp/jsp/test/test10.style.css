@@ -1,0 +1,21 @@
+@charset "UTF-8";
+#wrap{
+	width:1200px;
+	height:800px;
+}
+.main-bar{
+	height:100px;
+	
+}
+.nav{
+	height:80px;
+}
+.article1{
+	height:220px;
+}
+.article2{
+	height:300px;
+}
+.copyright{
+	text-weight:bold;
+}
