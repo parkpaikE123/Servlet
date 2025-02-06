@@ -40,6 +40,7 @@ public class Ex01Controller extends HttpServlet{
 			// 쿼리 작성
 			String query = "SELECT * FROM `used_goods`";
 			
+			
 			// 쿼리 수행
 			Statement statement = connection.createStatement();
 			
