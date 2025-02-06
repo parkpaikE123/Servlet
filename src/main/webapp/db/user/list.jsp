@@ -11,13 +11,13 @@
 <body>
 <%
 	MysqlService mysqlService = new MysqlService();
-
+	
 	mysqlService.connect();
 	
 	ResultSet resultSet = mysqlService.select("SELECT * FROM `new_user` ORDER BY `id` DESC");
 %>
-
-
+	
+	
 	<h3>사용자 목록</h3>
 	
 	<table border="1">
@@ -32,13 +32,13 @@
 		<%while(resultSet.next()) { %>
 			<tr>
 				<td><%= resultSet.getString("name")%></td>
-				<td><%=resultSet.getString("email") %></td>
-				<td><%=resultSet.getString("introduce") %></td>
+				<td><%= resultSet.getString("email")%></td>
+				<td><%= resultSet.getString("introduce")%></td>
 			</tr>
 		<%} %>
 		</tbody>
 	</table>
-
-
+	
+	
 </body>
 </html>
