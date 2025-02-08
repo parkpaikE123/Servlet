@@ -9,21 +9,19 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.ryujm.common.MysqlService;
 
-@WebServlet("/db/site/siteDelete")
+@WebServlet("/db/site/delete")
 public class SiteDeleteController extends HttpServlet{
 
 	@Override
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		
-		String name = request.getParameter("name");
+		String id = request.getParameter("id");
 		
 		MysqlService mysqlService = new MysqlService();
 		
 		mysqlService.connect();
 		
-		String query = "DELETE FROM `site_address` WHERE `name`=" + name + ";";
-		
-		int count = mysqlService.update(query);
+		mysqlService.update("DELETE FROM `site_address` WHERE `id` =" + id + ";");
 		
 		response.sendRedirect("/db/site/SiteList.jsp");
 		

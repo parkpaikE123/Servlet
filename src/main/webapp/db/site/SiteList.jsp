@@ -8,7 +8,7 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-<title>목록 출력하기</title>
+<title>즐겨찾기 목록</title>
 </head>
 <body>
 	
@@ -17,7 +17,7 @@
 	
 	mysqlService.connect();
 	
-	ResultSet resultSet = mysqlService.select("SELECT `name`, `url` FROM `site_address` ORDER BY `id` DESC;");
+	ResultSet resultSet = mysqlService.select("SELECT * FROM `site_address` ORDER BY `id` DESC;");
 	
 %>
 	
@@ -38,8 +38,8 @@
 				<tr>
 					<td><%= resultSet.getString("name")%></td>
 					<td><a href="<%= resultSet.getString("url")%>" target="_blank"><%= resultSet.getString("url") %></a></td>
-					<td><a href="/db/site/siteDelete">삭제</a></td>
-				</tr>
+				 	<td><a href="/db/site/delete?id=<%= resultSet.getInt("id")%>">삭제</a></td>
+				</tr>	
 			<%} %>
 			</tbody>
 		</table>

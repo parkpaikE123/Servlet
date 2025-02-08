@@ -9,11 +9,11 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.ryujm.common.MysqlService;
 
-@WebServlet("/db/user/siteCreate")
+@WebServlet("/db/site/create")
 public class SiteCreateController extends HttpServlet{
 	
 	@Override
-	public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+	public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		
 		String name = request.getParameter("name");
 		String url = request.getParameter("url");
@@ -30,7 +30,7 @@ public class SiteCreateController extends HttpServlet{
 				
 		int count = mysqlService.update(query);
 		
-		response.sendRedirect("/db/user/SiteList.jsp");
+		response.sendRedirect("/db/site/SiteList.jsp");
 		
 	}
 	

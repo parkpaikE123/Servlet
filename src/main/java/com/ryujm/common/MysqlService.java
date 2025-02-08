@@ -10,6 +10,23 @@ public class MysqlService {
 	
 	private Connection connection;
 	
+	// 클래스를 설계하는 입장에서 
+	// 해당 클래스의 객체가 하나 이상 만들어 지지 않도록 한다.
+	// 하나의 객체를 공유해서 사용하도록한다.
+	// Singleton pattern
+	// static 멤버변수 : 객체 생성없이 사용할 수 있는 멤버변수
+	private static MysqlService mysqlService = null;
+	
+	// static 메소드 : 객체 생성없이 호출할 수 있는 메소드
+	public static MysqlService getInstance() {
+		
+		if(mysqlService == null) {
+			mysqlService = new MysqlService();
+		}
+			return mysqlService;
+	}
+	
+	
 	// 데이터 베이스 접속
 	public boolean connect() {
 		// database 서버 접속

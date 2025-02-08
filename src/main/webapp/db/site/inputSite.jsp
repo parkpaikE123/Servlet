@@ -8,16 +8,16 @@
 <title>입력하기</title>
 </head>
 <body>
-	<form method="get" action="/db/site/siteCreate">
+	<form method="post" action="/db/site/create">
 		<div class="container">
 			<h2>즐겨찾기 추가</h2>
 			<div>
-				사이트명 : 
-				<input type="text" class="form-control w-50" name="name">
+				<label>사이트명 : </label> 
+				<input type="text" class="form-control col-3" name="name">
 			</div>
 			<div>
-				사이트 주소 :
-				<input type="text" class="form-control" name="url">
+				<label>사이트 주소 : </label>
+				<input type="text" class="form-control col-6" name="url">
 			</div>
 			<button class="btn btn-success mt-4" type="submit">추가</button>
 		</div>
