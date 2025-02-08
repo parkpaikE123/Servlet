@@ -17,7 +17,7 @@ public class SiteDeleteController extends HttpServlet{
 		
 		String id = request.getParameter("id");
 		
-		MysqlService mysqlService = new MysqlService();
+		MysqlService mysqlService = MysqlService.getInstance();
 		
 		mysqlService.connect();
 		

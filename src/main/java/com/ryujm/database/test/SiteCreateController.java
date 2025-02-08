@@ -18,7 +18,7 @@ public class SiteCreateController extends HttpServlet{
 		String name = request.getParameter("name");
 		String url = request.getParameter("url");
 		
-		MysqlService mysqlService = new MysqlService();
+		MysqlService mysqlService = MysqlService.getInstance();
 		
 		mysqlService.connect();
 		

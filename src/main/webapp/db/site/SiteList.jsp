@@ -13,11 +13,11 @@
 <body>
 	
 <% 
-	MysqlService mysqlService = new MysqlService();
+	MysqlService mysqlService = MysqlService.getInstance();
 	
 	mysqlService.connect();
 	
-	ResultSet resultSet = mysqlService.select("SELECT * FROM `site_address` ORDER BY `id` DESC;");
+	List<Map<String, Object>> resultList = mysqlService.select("SELECT * FROM `site_address` ORDER BY `id` DESC;");
 	
 %>
 	
@@ -34,11 +34,11 @@
 			</thead>
 			<tbody>
 			
-			<%while(resultSet.next()) {%>
+			<%for(Map<String, Object> result:resultList) {%>
 				<tr>
-					<td><%= resultSet.getString("name")%></td>
-					<td><a href="<%= resultSet.getString("url")%>" target="_blank"><%= resultSet.getString("url") %></a></td>
-				 	<td><a href="/db/site/delete?id=<%= resultSet.getInt("id")%>">삭제</a></td>
+					<td><%= result.get("name")%></td>
+					<td><a href="<%= result.get("url")%>" target="_blank"><%= result.get("url") %></a></td>
+				 	<td><a href="/db/site/delete?id=<%= result.get("id")%>">삭제</a></td>
 				</tr>	
 			<%} %>
 			</tbody>
